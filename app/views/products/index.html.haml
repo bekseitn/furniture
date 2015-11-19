@@ -1,0 +1,6 @@
+%h3.text-center Товары
+.row
+  .col-md-3
+    = render "categories"
+  .col-md-9
+    = render "list", products: @products

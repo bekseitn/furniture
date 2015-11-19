@@ -1,0 +1,14 @@
+.well
+  .row
+    .col-md-9
+      %h4= product.name
+    .col-md-3
+      = form_for order_item, remote: true do |f|
+        %h4.text-right
+          Цена:
+          %span{:style => "color: green"}= number_to_currency product.price
+        .input-group
+          = f.number_field :quantity, value: 1, class: "form-control", min: 1
+          .input-group-btn
+            = f.hidden_field :product_id, value: product.id
+            = f.submit "Купить", class: "btn btn-primary"

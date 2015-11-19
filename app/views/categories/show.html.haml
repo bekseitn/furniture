@@ -1,0 +1,7 @@
+%h3.text-center= @category.name
+
+.row
+  .col-md-3
+    = render "products/categories"
+  .col-md-9
+    = render "products/list", products: @products
