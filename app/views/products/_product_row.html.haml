@@ -1,6 +1,8 @@
 .well
   .row
-    .col-md-9
+    .col-md-3.text-center
+      = image_tag product.picture_url(:thumb)
+    .col-md-6
       %h4= product.name
     .col-md-3
       = form_for order_item, remote: true do |f|

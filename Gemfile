@@ -12,11 +12,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'google-webfonts-rails'
-gem 'compass-rails' 
-gem 'sass', '~>3.2.0'
-gem 'susy', '~>1.0.0'
-gem 'breakpoint', '~>2.0.0'
+gem 'sass-rails', '~> 5.0'
+
 gem 'jquery-ui-rails'
 
 # Use jquery as the JavaScript library
@@ -56,3 +53,8 @@ gem 'populator'
 
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+
+gem 'carrierwave'
+gem 'cloudinary'
+
+gem 'rails_admin'
