@@ -2,7 +2,7 @@ class Ordering < ActiveRecord::Base
   belongs_to :order_status
   belongs_to :order
   belongs_to :city
-  has_many :order_items
+  has_many :order_items, dependent: :destroy
   before_create :set_order_params
   after_create :set_order_items
 
