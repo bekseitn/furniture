@@ -12,7 +12,7 @@
 
 # Ignore other unneeded files.
 database.yml
-#cloudinary.yml
+cloudinary.yml
 doc/
 *.swp
 *~
