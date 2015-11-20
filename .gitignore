@@ -21,4 +21,4 @@ doc/
 .idea
 .rvmrc
 .ruby-*
-.secret
+.secretRakefile
