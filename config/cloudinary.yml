@@ -1,0 +1,9 @@
+development:
+  cloud_name: "bekseitov"
+  api_key: "396734297846167"
+  api_secret: "yYO-AOFLAZo3WGZuMAJeu2_Iyvk"
+
+production:
+  cloud_name: "bekseitov"
+  api_key: "396734297846167"
+  api_secret: "yYO-AOFLAZo3WGZuMAJeu2_Iyvk"
