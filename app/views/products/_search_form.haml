@@ -2,6 +2,12 @@
 .well
   = form_for_filterrific @filterrific do |f| 
     .row
-      .col-md-6
+      .col-md-8
         = f.text_field :search_query, class: 'filterrific-periodically-observed form-control',
         placeholder: "Введите название продукта для поиска"             
+      .col-md-2
+        = f.text_field :with_price_gte, class: 'datepicker form-control', 
+        placeholder: "мин цена"
+      .col-md-2
+        = f.text_field :with_price_lt, class: 'datepicker form-control', 
+        placeholder: "макс цена"        

@@ -18,10 +18,18 @@ Category.create!([
 
 OrderStatus.delete_all
 OrderStatus.create!([
-  {id: 1, name: "In Progress"},
-  {id: 2, name: "Placed"},
-  {id: 3, name: "Shipped"},
-  {id: 4, name: "Cancelled"}
+  {id: 1, name: "В процессе"},
+  {id: 2, name: "На доставке"},
+  {id: 3, name: "Доставлен"},
+  {id: 4, name: "Отменен"}
 ])
 
 
+
+City.delete_all
+City.create!([
+  {name: "Астана"},
+  {name: "Алматы"},
+  {name: "Карагада"},
+  {name: "Актобе"}
+])

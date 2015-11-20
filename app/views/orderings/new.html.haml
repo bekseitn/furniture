@@ -1,0 +1,43 @@
+%h3.text-center Оформить заказ
+.row
+  .col-md-6
+    %h4.text-right
+      Сумма: 
+      = number_to_currency current_order.total
+    - current_order.order_items.each do |oi|
+      .well
+        .row
+          .col-sm-7= oi.product.name
+          .col-sm-2= "#{oi.quantity} шт."
+          .col-sm-3= number_to_currency oi.unit_price
+  .col-md-6
+    = form_for @ordering, html: { class: "form-horizontal" } do |f|
+      - if @ordering.errors.any?
+        #error_expl.panel.panel-danger
+          .panel-heading
+            %h3.panel-title
+              Невозможно сохранить:
+          .panel-body
+            %ul
+              - @ordering.errors.full_messages.each do |msg|
+                %li= msg
+      .form-group
+        = f.hidden_field :order_id
+        = f.label :name, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :name, class: 'form-control'
+      .form-group    
+        = f.label :address, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :address, class: 'form-control'
+      .form-group    
+        = f.label :phone, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.text_field :phone, class: 'form-control'          
+      .form-group    
+        = f.label :city, class: 'col-sm-2 control-label'
+        .col-sm-10
+          = f.collection_select :city_id, City.all, :id, :name,
+        {prompt: "Выберите город"},  {class: "form-control"}
+
+      .text-right= f.submit "Оформить", class: 'btn btn-primary'

@@ -272,13 +272,7 @@ ru:
       full: "%d %b %Y г., %H:%M"
     pm: вечера
     
-  will_paginate:
-    models:
-      product:
-        one: "курс для студента"
-        many: "курсов для студентов"
-        few: "курса для студентов"
-        other: "курсы для студентов"        
+  will_paginate:    
     next_label: "Следующая →"
     page_entries_info:
       multi_page:
@@ -305,3 +299,70 @@ ru:
         zero: "%{model} не найдены"
     page_gap: "&hellip;"
     previous_label: "← Предыдущая"
+
+  activerecord: 
+    models:  
+      category:
+        one: "категория"
+        other: "категории"
+      product:
+        one: "товар"
+        other: "товары"
+      order_item:
+        one: "товар заказа"
+        other: "товары заказов"
+      order_status:
+        one: "статус заказа"
+        other: "статусы заказов"
+      order:
+        one: "не оформленный заказ"
+        other: "не оформленные заказы"
+      ordering:
+        one: "оформленный заказ"
+        other: "оформленные заказы"
+      city:
+        one: "город"
+        other: "города"
+    attributes:                                                                   
+      product:
+        name: "название"
+        price: "цена"    
+        active: "статус"    
+        category: "категория"    
+        picture: "изображение" 
+        created_at: "дата добавления"
+        updated_at: "дата обновления"
+        order_items: "товары в заказе"                             
+      category:
+        name: "название"
+        products: "товары"
+      city:
+        name: "название"
+        orderings: "заказы"
+      order_item:
+        product: "продукт"
+        order: "неоформленный заказ"    
+        ordering: "оформленный заказ"    
+        unit_price: "цена за единицу"    
+        quantity: "количество"    
+        total_price: "сумма"    
+      order_status:
+        name: "название"
+        orderings: "заказы"
+      ordering:
+        city: "город"
+        order: "неоформленный заказ"    
+        order_status: "статус"    
+        address: "адрес"    
+        total: "сумма"    
+        name: "имя клиента"   
+        phone: "номер телефона"
+        created_at: "дата добавления"
+        updated_at: "дата обновления" 
+        order_items: "товары в заказах"       
+      order:
+        total: "общая цена"
+        order_items: "товары"
+        created_at: "дата добавления"
+        updated_at: "дата обновления"
+        order_items: "товары в заказах"

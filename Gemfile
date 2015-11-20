@@ -63,3 +63,4 @@ gem 'carrierwave'
 gem 'cloudinary'
 
 gem 'rails_admin'
+gem "rails-erd"

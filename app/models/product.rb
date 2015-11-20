@@ -6,9 +6,19 @@ class Product < ActiveRecord::Base
 
   filterrific(
     available_filters: [
-      :search_query
+      :search_query,
+      :with_price_gte,
+      :with_price_lt      
     ]
   )  
+
+  scope :with_price_gte, lambda { |price|
+    where('products.price >= ?', price)
+  }
+
+  scope :with_price_lt, lambda { |price|
+    where('products.price <= ?', price)
+  }
 
   scope :search_query, lambda { |query|
     return nil  if query.blank?

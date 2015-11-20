@@ -1,7 +1,5 @@
 class Order < ActiveRecord::Base
-  belongs_to :order_status
   has_many :order_items, dependent: :destroy
-  before_create :set_order_status
   before_save :update_total
 
   def total
@@ -9,9 +7,6 @@ class Order < ActiveRecord::Base
   end
 
 private
-  def set_order_status
-    self.order_status_id = 1
-  end
 
   def update_total
     self[:total] = total

@@ -15,6 +15,41 @@ RailsAdmin.config do |config|
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
 
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
+  config.model 'OrderItem' do
+    object_label_method do
+      :product_name
+    end
+  end
+
+  config.model 'Product' do
+    object_label_method do
+      :name
+    end
+  end
+
+  config.model 'City' do
+    object_label_method do
+      :name
+    end
+  end 
+
+  config.model 'Category' do
+    object_label_method do
+      :name
+    end
+  end
+
+  config.model 'OrderStatus' do
+    object_label_method do
+      :name
+    end
+  end
+
+  config.model 'Ordering' do
+    object_label_method do
+      :name
+    end
+  end
 
   config.actions do
     dashboard                     # mandatory

@@ -5,7 +5,8 @@
         %li= msg
 - if @order_items.blank?
   %p.text-center
-    There are no items in your shopping cart.  Please #{link_to "go back", root_path} and add some items to your cart.
+    В вашей корзине нет товаров. Пожалуйста, #{link_to "вернитесь", root_path} и добавьте некоторые элементы в корзину.   
 - else
+  %p.text-right= link_to "Оформить заказ", new_ordering_path(order: current_order), class: "btn btn-primary"
   - @order_items.each do |order_item|
     = render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true

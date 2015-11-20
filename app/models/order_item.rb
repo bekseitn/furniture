@@ -1,6 +1,7 @@
 class OrderItem < ActiveRecord::Base
   belongs_to :product
   belongs_to :order
+  belongs_to :ordering
 
   validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
   validate :product_present
@@ -14,6 +15,10 @@ class OrderItem < ActiveRecord::Base
 
   def total_price
     unit_price * quantity
+  end
+
+  def product_name
+    product.name
   end
 
 private
