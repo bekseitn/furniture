@@ -1,8 +1,3 @@
-Product.delete_all
-Product.create! id: 1, name: "Banana", price: 310, active: true
-Product.create! id: 2, name: "Apple", price: 200, active: true
-Product.create! id: 3, name: "Carton of Strawberries", price: 100, active: true
-
 Category.delete_all
 Category.create!([
         {name: "Банкетки"},

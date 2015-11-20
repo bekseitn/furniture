@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require filterrific/filterrific-jquery
 //= require turbolinks
 //= require_tree .

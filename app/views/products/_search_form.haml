@@ -1,0 +1,7 @@
+//Форма поиска
+.well
+  = form_for_filterrific @filterrific do |f| 
+    .row
+      .col-md-6
+        = f.text_field :search_query, class: 'filterrific-periodically-observed form-control',
+        placeholder: "Введите название продукта для поиска"             

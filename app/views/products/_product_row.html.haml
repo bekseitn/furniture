@@ -14,3 +14,4 @@
           .input-group-btn
             = f.hidden_field :product_id, value: product.id
             = f.submit "Купить", class: "btn btn-primary"
+        %h4.text-right= product.category.name

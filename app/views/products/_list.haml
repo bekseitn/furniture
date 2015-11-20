@@ -1,8 +1,13 @@
 #filterrific_results
+  .well.well-small
+    .pull-right
+      = link_to 'Сбросить фильтр',reset_filterrific_url, class: "btn btn-default"
+    = "Найдено " + products.count.to_s
+  = render_filterrific_spinner 
 
-  = will_paginate @products, renderer: BootstrapPagination::Rails  
+  = will_paginate products, renderer: BootstrapPagination::Rails  
 
-  - @products.each do |product|
+  - products.each do |product|
     = render "products/product_row", product: product, order_item: @order_item
 
-  = will_paginate @products, renderer: BootstrapPagination::Rails   
+  = will_paginate products, renderer: BootstrapPagination::Rails   

@@ -3,8 +3,6 @@ namespace :db do
   task :populate => :environment do
     require 'faker'
     require 'populator'    
-      
-    password = "password"
 
     Product.populate 100 do |product|
       product.name = Faker::Commerce.product_name
