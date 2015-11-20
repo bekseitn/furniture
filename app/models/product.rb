@@ -3,6 +3,7 @@ class Product < ActiveRecord::Base
   has_many :order_items, dependent: :destroy
   default_scope { where(active: true) }
   mount_uploader :picture, PictureUploader
+  validates :name, presence: true
 
   filterrific(
     available_filters: [

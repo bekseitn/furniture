@@ -1,1 +1,1 @@
-= link_to "#{current_order.order_items.size} товаров в корзине ( #{number_to_currency current_order.total} )", cart_path, class: "btn btn-link"
+= link_to "товаров в корзине: #{current_order.order_items.size} ( #{number_to_currency current_order.total} )", cart_path, class: "btn btn-link"
